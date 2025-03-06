@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <h1>Descubra se você é estrangeiro</h1>
+    <p>Coloque o seu pais:</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="ver" onclick="calcular()">
+    <div id="resp">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtpa = window.document.querySelector("#pais")
+            var res = window.document.querySelector("#resp")
+            var pais = txtpa.value.trim();
+            res.innerHTML = `<p>O seu pais <strong>${pais}</strong></p>`
+
+            if (pais.toLowerCase() == "brasil") {
+                res.innerHTML += `<p>Você é brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+
+</body>
+</html>
