@@ -19,9 +19,15 @@ section{
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.641);
 }
 
+div{
+    text-align: center;
+    padding: 8px;
+}
+
 footer{
     padding: 15px;
     color: white;
     text-align: center;
     font-style: italic;
 }
+
