@@ -12,13 +12,18 @@ pas.addEventListener("keydown", function (event) {
         let passos = Number(pas.value)
 
         res.innerHTML = ""
-        if (ini > 0) {
-            for (let c = inicio; c <= final; c += passos) {
-                res.innerHTML += (`${c} 👉`)
+        if (inicio > 0) {
+            if (inicio < final) {
+                for (let c = inicio; c <= final; c += passos) {
+                    res.innerHTML += (`${c} 👉`)
+                }
+            }
+            else if (inicio >= final) {
+                window.alert("Digite um numero de inicio maior que o numero do fim")
             }
         }
-        else if (inicio || final || passos <= 0) {
-            window.alert("Numero invalido digite outro")
+        else if (inicio <= 0 || final <= 0 || passos <= 0) {
+            window.alert("Numero invalido! Digite um número maior que 0")
         }
 
 
