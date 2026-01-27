@@ -5,17 +5,21 @@ function contar() {
     let res = document.getElementById("res")
 
 
-
+    if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
+       window.alert("Preencha todos os campos")
+   }else {
+    
     let inicio = Number(ini.value)
     let final = Number(fim.value)
     let passos = Number(pas.value)
 
+    if(passos == 0){
+        window.alert("Numero de passos invalido! Considerando passos 1")
+        passos = 1
+    }
+
     res.innerHTML = ""
     
-    if (inicio <= 0 || final <= 0 || passos <= 0) {
-       window.alert("Numero invalido! Digite um número maior que 0")
-   }
-    else {
         if (inicio <= final) {
             for (let c = inicio; c <= final; c += passos) {
                 res.innerHTML += (`${c} 👉`)
