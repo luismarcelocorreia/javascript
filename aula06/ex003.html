@@ -23,10 +23,10 @@
     <h1>Olá, mundo!</h1>
     <p>Já me livrei</p>
     <script>
-        var n1 = Number.parseFloat( window.prompt("Digite um numero"))//float qnd for quebrado
-        var n2 = Number.parseInt(window.prompt("Digite outro numero"))//int usa quando for inteiro
+        var n1 = Number( window.prompt("Digite um numero"))//float qnd for quebrado
+        var n2 = Number(window.prompt("Digite outro numero"))//int usa quando for inteiro
         var n3 = n1 + n2
-        window.alert("A soma dos numeros que você digitou é:" + n3)
+        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${n3}`)
     </script>
 </body>
 </html>
